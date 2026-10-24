@@ -101,8 +101,8 @@
                 </a>
                 <a href="#blueprint" class="hover:text-cyan-400 transition">Blueprint</a>
                 <a href="#impact" class="hover:text-cyan-400 transition">ESG Impact</a>
-                <a href="#innovator" class="hover:text-cyan-400 transition flex items-center gap-1.5 text-amber-400">
-                    <i data-lucide="user-check" class="w-4 h-4"></i> Souradip Ghosh
+                <a href="#team" class="hover:text-cyan-400 transition flex items-center gap-1.5 text-amber-400 font-semibold">
+                    <i data-lucide="users" class="w-4 h-4"></i> Innovation Team
                 </a>
             </nav>
 
@@ -131,7 +131,9 @@
             <a href="#simulator" class="block py-2 text-emerald-400 font-semibold">Interactive Energy Simulator</a>
             <a href="#blueprint" class="block py-2 text-slate-200 hover:text-cyan-400">Station Deployment Blueprint</a>
             <a href="#impact" class="block py-2 text-slate-200 hover:text-cyan-400">Environmental &amp; ESG Impact</a>
-            <a href="#innovator" class="block py-2 text-amber-400 font-semibold">About Souradip Ghosh</a>
+            <a href="#team" class="block py-2 text-amber-400 font-semibold flex items-center gap-2">
+                <i data-lucide="users" class="w-4 h-4"></i> Meet The Innovation Team
+            </a>
             <div class="pt-3 flex flex-col gap-2">
                 <a href="#step-simulator" class="w-full text-center py-2.5 rounded-lg text-xs font-bold uppercase bg-slate-800 text-cyan-400 border border-slate-700">
                     Step On Tile (Interactive)
@@ -179,17 +181,23 @@
                     Transforming the daily footsteps of millions of railway commuters and sun-drenched platform rooftops into perpetual, decentralized clean electricity.
                 </p>
 
-                <!-- Project Attribution Badge -->
-                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-railway-800/90 border border-slate-700/80 shadow-xl mb-10">
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-400 to-cyan-400 flex items-center justify-center text-black font-bold text-xs">
-                        SG
+                <!-- Project Attribution Badge (Team Showcase) -->
+                <div class="inline-flex flex-col sm:flex-row items-center gap-4 px-6 py-3.5 rounded-3xl bg-railway-800/90 border border-slate-700/80 shadow-2xl mb-10 backdrop-blur-md">
+                    <!-- Overlapping Team Avatars -->
+                    <div class="flex items-center -space-x-3">
+                        <img src="assets/team/souradip.jpg" alt="Souradip Ghosh - Lead Engineer" class="w-10 h-10 rounded-full border-2 border-emerald-400 object-cover avatar-souradip shadow-md">
+                        <img src="assets/team/angshu.jpg" alt="Angshu Sarkar - Frontend Engineer" class="w-10 h-10 rounded-full border-2 border-cyan-400 object-cover avatar-angshu shadow-md">
+                        <img src="assets/team/sneha.png" alt="Sneha Mukherjee - Frontend Engineer" class="w-10 h-10 rounded-full border-2 border-amber-400 object-cover avatar-sneha shadow-md">
                     </div>
-                    <div class="text-left">
-                        <p class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Conceived &amp; Engineered by</p>
-                        <p class="text-sm font-bold text-white flex items-center gap-1.5">
-                            SOURADIP GHOSH
-                            <span class="text-[10px] px-1.5 py-0.2 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Lead Innovator</span>
-                        </p>
+                    <div class="text-center sm:text-left">
+                        <p class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Engineered &amp; Developed By</p>
+                        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs font-bold text-white mt-0.5">
+                            <span class="text-white hover:text-emerald-300 transition">SOURADIP GHOSH <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">Lead Engineer</span></span>
+                            <span class="text-slate-600 hidden sm:inline">&bull;</span>
+                            <span class="text-slate-300 hover:text-cyan-300 transition">ANGSHU SARKAR <span class="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-mono">Frontend</span></span>
+                            <span class="text-slate-600 hidden sm:inline">&bull;</span>
+                            <span class="text-slate-300 hover:text-amber-300 transition">SNEHA MUKHERJEE <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-mono">Frontend</span></span>
+                        </div>
                     </div>
                 </div>
 
@@ -922,64 +930,212 @@
         </div>
     </section>
 
-    <!-- SECTION: MEET THE INNOVATOR - SOURADIP GHOSH -->
-    <section id="innovator" class="py-24 relative overflow-hidden">
-        <div class="absolute -bottom-10 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- SECTION: MEET THE INNOVATION TEAM -->
+    <section id="team" class="py-24 relative overflow-hidden">
+        <!-- Ambient Background Glows -->
+        <div class="absolute -top-20 left-1/3 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-railway-800 via-railway-800 to-railway-900 border-2 border-slate-700/80 shadow-2xl relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400 flex items-center justify-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> The Minds Behind The Innovation
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white mt-2">
+                    Meet Our Innovation Team
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-amber-400 via-cyan-400 to-emerald-400 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-300 mt-4 text-base leading-relaxed">
+                    A passionate group of engineering students uniting mechanical modeling, renewable energy microgrid systems, and interactive frontend design to pioneer sustainable railway infrastructure.
+                </p>
+            </div>
+
+            <!-- Team Grid (3 Members) -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
                 
-                <div class="flex flex-col md:flex-row items-center gap-10">
-                    <!-- Profile Badge / Avatar -->
-                    <div class="flex flex-col items-center text-center">
-                        <div class="w-36 h-36 rounded-3xl bg-gradient-to-tr from-emerald-500 via-cyan-400 to-amber-400 p-1 shadow-xl shadow-cyan-500/20 mb-4 transform hover:rotate-3 transition duration-300">
-                            <div class="w-full h-full bg-railway-900 rounded-[22px] flex flex-col items-center justify-center text-center p-3">
-                                <span class="font-display font-black text-4xl bg-gradient-to-br from-white via-cyan-200 to-emerald-400 bg-clip-text text-transparent">SG</span>
-                                <span class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mt-1">Innovator</span>
+                <!-- MEMBER 1: SOURADIP GHOSH (Lead Engineer) -->
+                <div class="card-hover rounded-3xl bg-railway-800/80 border-2 border-emerald-500/50 p-6 flex flex-col justify-between relative overflow-hidden group team-lead-glow">
+                    <!-- Top Ribbon -->
+                    <div class="absolute top-4 right-4">
+                        <span class="text-[10px] uppercase font-mono font-bold tracking-wider px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                            Team Lead
+                        </span>
+                    </div>
+
+                    <div>
+                        <!-- Photo Frame -->
+                        <div class="w-32 h-32 mx-auto rounded-3xl p-1 bg-gradient-to-tr from-emerald-500 via-cyan-400 to-amber-400 shadow-xl shadow-cyan-500/20 mb-6 group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-full h-full rounded-[22px] overflow-hidden bg-railway-900">
+                                <img src="assets/team/souradip.jpg" alt="Souradip Ghosh - Lead Engineer" class="w-full h-full object-cover avatar-souradip">
                             </div>
                         </div>
-                        <h3 class="text-2xl font-display font-black text-white">SOURADIP GHOSH</h3>
-                        <p class="text-xs font-semibold text-cyan-400 tracking-wider uppercase mt-1">Creator &amp; System Architect</p>
-                        
-                        <!-- Socials / Links -->
-                        <div class="flex items-center gap-3 mt-4">
-                            <a href="https://github.com/0xSouradip" target="_blank" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 flex items-center justify-center transition" title="GitHub Profile">
-                                <i data-lucide="github" class="w-4 h-4"></i>
-                            </a>
-                            <a href="mailto:ghoshsouradip02@gmail.com" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 border border-slate-700 flex items-center justify-center transition" title="Email Contact">
-                                <i data-lucide="mail" class="w-4 h-4"></i>
-                            </a>
+
+                        <!-- Info -->
+                        <div class="text-center">
+                            <h3 class="text-xl font-display font-black text-white">SOURADIP GHOSH</h3>
+                            <p class="text-xs font-bold text-emerald-400 tracking-wider uppercase mt-1">Lead Engineer &amp; System Architect</p>
+                            <span class="inline-block mt-1 text-[11px] text-slate-400 font-medium bg-slate-900/60 px-2.5 py-0.5 rounded-full border border-slate-800">
+                                Engineering Student &amp; Innovator
+                            </span>
+                        </div>
+
+                        <!-- Bio -->
+                        <p class="text-xs text-slate-300 text-center leading-relaxed mt-4">
+                            Envisioned and formulated the core concept of <strong>Har Kadam Bijli Ka</strong>. Leads the hybrid physical-mathematical modeling, piezoelectric stack analysis, solar bifacial rooftop calculations, and overall system microgrid architecture.
+                        </p>
+
+                        <!-- Specialties -->
+                        <div class="mt-4 pt-4 border-t border-slate-700/60 space-y-1.5 text-left">
+                            <span class="text-[10px] uppercase font-mono font-bold text-slate-400 block mb-1">Key Focus:</span>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-cyan-300 border border-slate-700">System Architecture</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-slate-700">Kinetic Physics</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-amber-300 border border-slate-700">Microgrids</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Innovator Bio & Vision Statement -->
-                    <div class="space-y-4 text-center md:text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                            <i data-lucide="award" class="w-3.5 h-3.5"></i> Project Genesis &amp; Engineering Philosophy
+                    <!-- Contact / Socials -->
+                    <div class="mt-6 pt-4 border-t border-slate-700/60 flex items-center justify-center gap-3">
+                        <a href="https://github.com/0xSouradip" target="_blank" rel="noopener noreferrer" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 transition" title="GitHub">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                        <a href="mailto:ghoshsouradip02@gmail.com" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 border border-slate-700 transition" title="Email">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://github.com/0xSouradip/har-kadam-bijli-ka" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 text-xs font-bold transition flex items-center gap-1.5">
+                            <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> Repo Lead
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MEMBER 2: ANGSHU SARKAR (Frontend Engineer) -->
+                <div class="card-hover rounded-3xl bg-railway-800/80 border border-slate-700 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-cyan-500/50">
+                    <!-- Top Ribbon -->
+                    <div class="absolute top-4 right-4">
+                        <span class="text-[10px] uppercase font-mono font-bold tracking-wider px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
+                            Frontend
+                        </span>
+                    </div>
+
+                    <div>
+                        <!-- Photo Frame -->
+                        <div class="w-32 h-32 mx-auto rounded-3xl p-1 bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 shadow-xl shadow-cyan-500/20 mb-6 group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-full h-full rounded-[22px] overflow-hidden bg-railway-900">
+                                <img src="assets/team/angshu.jpg" alt="Angshu Sarkar - Frontend Engineer" class="w-full h-full object-cover avatar-angshu">
+                            </div>
                         </div>
-                        
-                        <h4 class="text-2xl font-display font-bold text-white">
-                            "Every Footstep Holds Unlocked Energy. We Just Needed The Bridge To Harvest It."
-                        </h4>
-                        
-                        <p class="text-sm text-slate-300 leading-relaxed">
-                            <strong>HAR KADAM BIJLI KA</strong> was envisioned and developed by <strong>SOURADIP GHOSH</strong> to solve one of the most pressing challenges of modern public infrastructure: how to transition mega-scale transit stations into self-sustaining, zero-emission green microgrids without disrupting everyday commuter travel.
-                        </p>
-                        
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            By harmonizing two complementary energy sources—the dynamic, high-density mechanical pressure of commuter footsteps and the abundant solar exposure of station sheds—this project provides a deployable, economically viable, and scalable engineering roadmap for smart railway stations across the globe.
+
+                        <!-- Info -->
+                        <div class="text-center">
+                            <h3 class="text-xl font-display font-black text-white">ANGSHU SARKAR</h3>
+                            <p class="text-xs font-bold text-cyan-400 tracking-wider uppercase mt-1">Frontend Engineer</p>
+                            <span class="inline-block mt-1 text-[11px] text-slate-400 font-medium bg-slate-900/60 px-2.5 py-0.5 rounded-full border border-slate-800">
+                                Engineering Student &amp; Developer
+                            </span>
+                        </div>
+
+                        <!-- Bio -->
+                        <p class="text-xs text-slate-300 text-center leading-relaxed mt-4">
+                            Passionate engineering student and frontend developer specializing in responsive web applications. Engineered the interactive simulator controls, tactile footstep tile synthesizer, and smooth cross-device interaction pipelines.
                         </p>
 
-                        <div class="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
-                            <a href="https://github.com/0xSouradip/har-kadam-bijli-ka" target="_blank" class="px-5 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black shadow-lg shadow-cyan-500/20 transition flex items-center gap-2">
-                                <i data-lucide="git-branch" class="w-4 h-4"></i>
-                                <span>Contribute on GitHub</span>
-                            </a>
-                            <button id="openWhitepaperBtn2" class="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/30 transition flex items-center gap-2">
-                                <i data-lucide="book-open" class="w-4 h-4"></i>
-                                <span>Read Full Project Proposal</span>
-                            </button>
+                        <!-- Specialties -->
+                        <div class="mt-4 pt-4 border-t border-slate-700/60 space-y-1.5 text-left">
+                            <span class="text-[10px] uppercase font-mono font-bold text-slate-400 block mb-1">Key Focus:</span>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-cyan-300 border border-slate-700">Interactive UI</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-blue-300 border border-slate-700">Web Audio API</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-slate-700">Component State</span>
+                            </div>
                         </div>
+                    </div>
+
+                    <!-- Contact / Socials -->
+                    <div class="mt-6 pt-4 border-t border-slate-700/60 flex items-center justify-center gap-3">
+                        <a href="https://github.com/0xSouradip/har-kadam-bijli-ka" target="_blank" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 transition" title="GitHub">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                        <span class="text-xs text-slate-400 font-mono">Frontend Architecture</span>
+                    </div>
+                </div>
+
+                <!-- MEMBER 3: SNEHA MUKHERJEE (Frontend Engineer) -->
+                <div class="card-hover rounded-3xl bg-railway-800/80 border border-slate-700 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-amber-500/50">
+                    <!-- Top Ribbon -->
+                    <div class="absolute top-4 right-4">
+                        <span class="text-[10px] uppercase font-mono font-bold tracking-wider px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                            Frontend
+                        </span>
+                    </div>
+
+                    <div>
+                        <!-- Photo Frame -->
+                        <div class="w-32 h-32 mx-auto rounded-3xl p-1 bg-gradient-to-tr from-amber-400 via-rose-500 to-emerald-400 shadow-xl shadow-amber-500/20 mb-6 group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-full h-full rounded-[22px] overflow-hidden bg-railway-900">
+                                <img src="assets/team/sneha.png" alt="Sneha Mukherjee - Frontend Engineer" class="w-full h-full object-cover avatar-sneha">
+                            </div>
+                        </div>
+
+                        <!-- Info -->
+                        <div class="text-center">
+                            <h3 class="text-xl font-display font-black text-white">SNEHA MUKHERJEE</h3>
+                            <p class="text-xs font-bold text-amber-400 tracking-wider uppercase mt-1">Frontend Engineer</p>
+                            <span class="inline-block mt-1 text-[11px] text-slate-400 font-medium bg-slate-900/60 px-2.5 py-0.5 rounded-full border border-slate-800">
+                                Engineering Student &amp; Developer
+                            </span>
+                        </div>
+
+                        <!-- Bio -->
+                        <p class="text-xs text-slate-300 text-center leading-relaxed mt-4">
+                            Engineering student dedicated to aesthetic UI/UX, visual accessibility, and data storytelling. Crafted the station diurnal power visualization charts, station blueprint zone mapping, and environmental ESG impact presentation.
+                        </p>
+
+                        <!-- Specialties -->
+                        <div class="mt-4 pt-4 border-t border-slate-700/60 space-y-1.5 text-left">
+                            <span class="text-[10px] uppercase font-mono font-bold text-slate-400 block mb-1">Key Focus:</span>
+                            <div class="flex flex-wrap gap-1.5 text-[11px]">
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-amber-300 border border-slate-700">Data Visualization</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-rose-300 border border-slate-700">UI Aesthetics</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-900 text-emerald-300 border border-slate-700">Chart.js Dashboards</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact / Socials -->
+                    <div class="mt-6 pt-4 border-t border-slate-700/60 flex items-center justify-center gap-3">
+                        <a href="https://github.com/0xSouradip/har-kadam-bijli-ka" target="_blank" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 transition" title="GitHub">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                        <span class="text-xs text-slate-400 font-mono">Telemetry &amp; UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Shared Mission Quote Card -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-railway-800 via-railway-800 to-railway-900 border border-slate-700 shadow-2xl relative overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-2 text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                            <i data-lucide="graduation-cap" class="w-4 h-4"></i> Student Engineering Initiative
+                        </div>
+                        <h4 class="text-xl sm:text-2xl font-display font-bold text-white">
+                            "Transforming Public Transit from Power Consumers to Clean Energy Generators"
+                        </h4>
+                        <p class="text-xs sm:text-sm text-slate-400 max-w-2xl">
+                            Our team came together as engineering students to prove that smart renewable systems can be integrated into high-density Indian railway infrastructure. Through rigorous kinetic energy modeling and responsive web design, we bring this blueprint to life.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <a href="https://github.com/0xSouradip/har-kadam-bijli-ka" target="_blank" class="px-5 py-3 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black shadow-lg shadow-cyan-500/20 transition flex items-center gap-2">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            <span>Star on GitHub</span>
+                        </a>
+                        <button id="openWhitepaperBtn2" class="px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/30 transition flex items-center gap-2">
+                            <i data-lucide="book-open" class="w-4 h-4"></i>
+                            <span>Project Whitepaper</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1001,7 +1157,10 @@
 
             <div class="text-center md:text-right">
                 <p class="text-slate-300 font-medium">
-                    Conceived &amp; Developed by <span class="text-cyan-400 font-bold">SOURADIP GHOSH</span>
+                    Conceived &amp; Engineered by <span class="text-emerald-400 font-bold">SOURADIP GHOSH</span> (Lead Engineer)
+                </p>
+                <p class="text-slate-400 font-medium mt-0.5">
+                    Frontend Engineering by <span class="text-cyan-400 font-semibold">ANGSHU SARKAR</span> &amp; <span class="text-amber-400 font-semibold">SNEHA MUKHERJEE</span>
                 </p>
                 <p class="text-[11px] text-slate-500 mt-1">
                     Theme: Sustainable Clean Energy &amp; Mobility | Focus: Renewable Energy &amp; Public Infrastructure Innovation
@@ -1023,13 +1182,16 @@
                     <span class="text-xs font-mono font-bold text-emerald-400 uppercase">Official Project Whitepaper &amp; Synopsis</span>
                     <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">HAR KADAM BIJLI KA</h2>
                     <p class="text-sm text-cyan-300 font-medium">A Hybrid Kinetic and Solar Energy System for Modern Railway Stations</p>
-                    <p class="text-xs text-slate-400 mt-1">Author &amp; Principal Investigator: <strong>Souradip Ghosh</strong></p>
+                    <div class="mt-2 text-xs text-slate-400 space-y-0.5">
+                        <p>Principal Investigator &amp; Lead Engineer: <strong class="text-emerald-300">Souradip Ghosh</strong></p>
+                        <p>Frontend Engineering &amp; Client Architecture: <strong class="text-cyan-300">Angshu Sarkar</strong> &amp; <strong class="text-amber-300">Sneha Mukherjee</strong></p>
+                    </div>
                 </div>
 
                 <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                     <h4 class="font-bold text-white text-base">1. Executive Abstract</h4>
                     <p>
-                        Railway transit infrastructure represents one of the highest concentrated densities of repetitive kinetic energy in human civilization. Every day, millions of travelers exert vertical compressive forces on station platforms, turnstiles, and overbridges. Concurrently, railway stations possess kilometers of unobstructed rooftop surface area over platforms and tracks. This project—<strong>HAR KADAM BIJLI KA</strong>, authored by <strong>SOURADIP GHOSH</strong>—presents an integrated hybrid energy generation architecture combining piezoelectric/mechanical kinetic floor tiles with bifacial solar photovoltaic canopies to establish autonomous, net-zero railway station microgrids.
+                        Railway transit infrastructure represents one of the highest concentrated densities of repetitive kinetic energy in human civilization. Every day, millions of travelers exert vertical compressive forces on station platforms, turnstiles, and overbridges. Concurrently, railway stations possess kilometers of unobstructed rooftop surface area over platforms and tracks. This project—<strong>HAR KADAM BIJLI KA</strong>, authored by student engineers <strong>SOURADIP GHOSH</strong> (Lead Engineer), <strong>ANGSHU SARKAR</strong> (Frontend Engineer), and <strong>SNEHA MUKHERJEE</strong> (Frontend Engineer)—presents an integrated hybrid energy generation architecture combining piezoelectric/mechanical kinetic floor tiles with bifacial solar photovoltaic canopies to establish autonomous, net-zero railway station microgrids.
                     </p>
 
                     <h4 class="font-bold text-white text-base">2. Physical &amp; Mathematical Principles</h4>
@@ -1053,7 +1215,7 @@
 
                     <h4 class="font-bold text-white text-base">4. Conclusion &amp; Socio-Economic Impact</h4>
                     <p>
-                        "Har Kadam Bijli Ka" demonstrates that sustainable public mobility is not merely about electric trains—it is about turning public stations into active renewable power plants. Under the initiative of <strong>Souradip Ghosh</strong>, this engineering model serves as a benchmark for next-generation green railway transit.
+                        "Har Kadam Bijli Ka" demonstrates that sustainable public mobility is not merely about electric trains—it is about turning public stations into active renewable power plants. Under the initiative of <strong>Souradip Ghosh</strong>, <strong>Angshu Sarkar</strong>, and <strong>Sneha Mukherjee</strong>, this engineering model serves as a benchmark for next-generation green railway transit.
                     </p>
                 </div>
 

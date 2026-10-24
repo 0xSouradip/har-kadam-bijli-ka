@@ -3,7 +3,7 @@
 
 [![Theme](https://img.shields.io/badge/Theme-Sustainable%20Clean%20Energy%20%26%20Mobility-10b981?style=for-the-badge)](https://github.com/0xSouradip/har-kadam-bijli-ka)
 [![Focus](https://img.shields.io/badge/Focus-Renewable%20Energy%20%7C%20Infrastructure%20Innovation-06b6d4?style=for-the-badge)](https://github.com/0xSouradip/har-kadam-bijli-ka)
-[![Innovator](https://img.shields.io/badge/Conceived%20%26%20Created%20By-SOURADIP%20GHOSH-f59e0b?style=for-the-badge)](https://github.com/0xSouradip)
+[![Team](https://img.shields.io/badge/Innovation%20Team-Student%20Engineers-f59e0b?style=for-the-badge)](https://github.com/0xSouradip/har-kadam-bijli-ka)
 [![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://0xsouradip.github.io/har-kadam-bijli-ka)
 
 ---
@@ -18,7 +18,8 @@ By strategically harvesting two complementary renewable resources:
 
 This hybrid ecosystem establishes a self-sufficient, climate-resilient microgrid capable of powering station lighting, concourse ventilation, passenger automated turnstiles, and EV charging hubs.
 
-> **Project Innovator & Lead Architect**: **SOURADIP GHOSH**  
+> **Lead Engineer & System Architect**: **SOURADIP GHOSH**  
+> **Frontend Engineers**: **ANGSHU SARKAR** & **SNEHA MUKHERJEE**  
 > **Theme**: Sustainable Clean Energy & Mobility  
 > **Core Focus**: Renewable energy, energy efficiency, sustainable public infrastructure, and innovation.
 
@@ -128,18 +129,21 @@ Where:
 
 ---
 
-## 👤 Innovator & Creator
+## 👥 The Innovation Team
 
-**SOURADIP GHOSH**  
-- **GitHub**: [@0xSouradip](https://github.com/0xSouradip)  
-- **Repository**: [har-kadam-bijli-ka](https://github.com/0xSouradip/har-kadam-bijli-ka)  
-- **Email**: `ghoshsouradip02@gmail.com`  
+We are a group of passionate engineering students dedicated to creating sustainable, climate-resilient technologies for public transit infrastructure.
 
-*Dedicated to pioneering sustainable, zero-emission transit infrastructure for Indian Railways and global public mobility.*
+| <img src="assets/team/souradip.jpg" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: 78% 25%;"> | <img src="assets/team/angshu.jpg" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: center 20%;"> | <img src="assets/team/sneha.png" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: center 15%;"> |
+| :---: | :---: | :---: |
+| **SOURADIP GHOSH** | **ANGSHU SARKAR** | **SNEHA MUKHERJEE** |
+| **Lead Engineer & System Architect** | **Frontend Engineer** | **Frontend Engineer** |
+| *Engineering Student* | *Engineering Student* | *Engineering Student* |
+| System design, kinetic modeling & microgrid architecture | Interactive controls, Web Audio simulator & UX state | Diurnal load analytics, ESG indicators & telemetry UI |
+| [GitHub](https://github.com/0xSouradip) • [Email](mailto:ghoshsouradip02@gmail.com) | [GitHub](https://github.com/0xSouradip/har-kadam-bijli-ka) | [GitHub](https://github.com/0xSouradip/har-kadam-bijli-ka) |
 
 ---
 
 ## 📜 License & Citation
 
 This project is open-source under the [MIT License](LICENSE).  
-If you reference or build upon this research and design, please attribute **Souradip Ghosh (HAR KADAM BIJLI KA)**.
+Developed by **Souradip Ghosh**, **Angshu Sarkar**, and **Sneha Mukherjee** for **HAR KADAM BIJLI KA**.
