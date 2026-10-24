@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAR KADAM BIJLI KA | Hybrid Kinetic & Solar Energy System for Railway Stations</title>
+    <meta name="description" content="HAR KADAM BIJLI KA - A revolutionary hybrid kinetic and solar energy harvesting system designed for railway stations. Created by Souradip Ghosh.">
+    <meta name="author" content="Souradip Ghosh">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        railway: {
+                            900: '#060d15',
+                            800: '#0b1622',
+                            700: '#112233',
+                            600: '#1b344d',
+                        },
+                        eco: {
+                            green: '#10b981',
+                            emerald: '#059669',
+                            cyan: '#06b6d4',
+                            electric: '#38bdf8',
+                            amber: '#f59e0b',
+                            sun: '#fbbf24',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2.5s infinite ease-in-out',
+                        'flow': 'flow 3s linear infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.9', transform: 'scale(1.05)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Chart.js for Live Data Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-railway-900 text-slate-100 font-sans selection:bg-eco-cyan selection:text-black overflow-x-hidden">
+
+    <!-- Top Glow Gradient Line -->
+    <div class="h-1 w-full bg-gradient-to-r from-emerald-500 via-cyan-400 to-amber-400 fixed top-0 z-50"></div>
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-1 left-0 right-0 z-40 bg-railway-900/85 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 via-cyan-500 to-amber-500 p-[2px] shadow-lg shadow-cyan-500/20 group-hover:shadow-emerald-500/40 transition">
+                    <div class="w-full h-full bg-railway-900 rounded-[10px] flex items-center justify-center">
+                        <i data-lucide="zap" class="w-6 h-6 text-cyan-400 group-hover:text-emerald-400 transition animate-pulse"></i>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-display font-extrabold text-xl tracking-tight text-white group-hover:text-cyan-300 transition">HAR KADAM BIJLI KA</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Hybrid Clean Power</span>
+                    </div>
+                    <p class="text-xs text-slate-400 font-medium">Kinetic &amp; Solar Microgrid for Railway Stations</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-cyan-400 transition">About System</a>
+                <a href="#tech" class="hover:text-cyan-400 transition">Technology</a>
+                <a href="#simulator" class="hover:text-cyan-400 transition flex items-center gap-1.5 text-emerald-400 font-semibold">
+                    <i data-lucide="calculator" class="w-4 h-4"></i> Live Simulator
+                </a>
+                <a href="#blueprint" class="hover:text-cyan-400 transition">Blueprint</a>
+                <a href="#impact" class="hover:text-cyan-400 transition">ESG Impact</a>
+                <a href="#innovator" class="hover:text-cyan-400 transition flex items-center gap-1.5 text-amber-400">
+                    <i data-lucide="user-check" class="w-4 h-4"></i> Souradip Ghosh
+                </a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#step-simulator" class="px-3.5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 hover:border-cyan-500 transition flex items-center gap-2">
+                    <i data-lucide="footprints" class="w-4 h-4 text-cyan-400"></i>
+                    <span>Step On Tile</span>
+                </a>
+                <a href="https://github.com/0xSouradip/har-kadam-bijli-ka" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black font-extrabold shadow-md shadow-cyan-500/20 transition flex items-center gap-2">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <span>GitHub Repo</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" aria-label="Toggle menu" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white bg-slate-800/80 border border-slate-700">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-railway-900/95 border-b border-slate-800 px-6 py-5 space-y-3">
+            <a href="#about" class="block py-2 text-slate-200 hover:text-cyan-400">About System</a>
+            <a href="#tech" class="block py-2 text-slate-200 hover:text-cyan-400">Hybrid Technology</a>
+            <a href="#simulator" class="block py-2 text-emerald-400 font-semibold">Interactive Energy Simulator</a>
+            <a href="#blueprint" class="block py-2 text-slate-200 hover:text-cyan-400">Station Deployment Blueprint</a>
+            <a href="#impact" class="block py-2 text-slate-200 hover:text-cyan-400">Environmental &amp; ESG Impact</a>
+            <a href="#innovator" class="block py-2 text-amber-400 font-semibold">About Souradip Ghosh</a>
+            <div class="pt-3 flex flex-col gap-2">
+                <a href="#step-simulator" class="w-full text-center py-2.5 rounded-lg text-xs font-bold uppercase bg-slate-800 text-cyan-400 border border-slate-700">
+                    Step On Tile (Interactive)
+                </a>
+                <a href="https://github.com/0xSouradip/har-kadam-bijli-ka" target="_blank" class="w-full text-center py-2.5 rounded-lg text-xs font-bold uppercase bg-gradient-to-r from-emerald-500 to-cyan-500 text-black font-extrabold">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+        <!-- Interactive Background Energy Grid Canvas -->
+        <canvas id="energyCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-45"></canvas>
+        
+        <!-- Glowing Ambient Orbs -->
+        <div class="absolute -top-32 left-1/4 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 left-10 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Theme & Focus Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mb-6">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                    <i data-lucide="leaf" class="w-3.5 h-3.5"></i> Theme: Sustainable Clean Energy &amp; Mobility
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">
+                    <i data-lucide="zap" class="w-3.5 h-3.5"></i> Kinetic &plus; Solar Hybrid Microgrid
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                    <i data-lucide="train" class="w-3.5 h-3.5"></i> Railway Infrastructure Innovation
+                </span>
+            </div>
+
+            <!-- Main Title & Subtitle -->
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-black tracking-tight leading-tight sm:leading-none text-white mb-6">
+                    HAR KADAM <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-amber-300 bg-clip-text text-transparent">BIJLI KA</span>
+                </h1>
+                <p class="text-lg sm:text-2xl text-slate-300 font-medium leading-relaxed mb-4">
+                    A Hybrid Kinetic &amp; Solar Energy Harvesting Ecosystem for Modern Railway Stations
+                </p>
+                <p class="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+                    Transforming the daily footsteps of millions of railway commuters and sun-drenched platform rooftops into perpetual, decentralized clean electricity.
+                </p>
+
+                <!-- Project Attribution Badge -->
+                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-railway-800/90 border border-slate-700/80 shadow-xl mb-10">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-400 to-cyan-400 flex items-center justify-center text-black font-bold text-xs">
+                        SG
+                    </div>
+                    <div class="text-left">
+                        <p class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Conceived &amp; Engineered by</p>
+                        <p class="text-sm font-bold text-white flex items-center gap-1.5">
+                            SOURADIP GHOSH
+                            <span class="text-[10px] px-1.5 py-0.2 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Lead Innovator</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Call to Action Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="#simulator" class="px-6 py-3.5 rounded-xl font-display font-bold text-sm bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black shadow-lg shadow-cyan-500/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i data-lucide="play-circle" class="w-5 h-5"></i>
+                        <span>Launch Energy Simulator</span>
+                    </a>
+                    <a href="#blueprint" class="px-6 py-3.5 rounded-xl font-display font-bold text-sm bg-railway-800 hover:bg-railway-700 text-slate-200 border border-slate-700 hover:border-slate-500 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i data-lucide="map" class="w-5 h-5 text-emerald-400"></i>
+                        <span>Explore Station Blueprint</span>
+                    </a>
+                    <button id="openWhitepaperBtn" class="px-6 py-3.5 rounded-xl font-display font-bold text-sm bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/30 hover:border-amber-400 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                        <span>Read Technical Whitepaper</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Key Quick Stats Strip -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto">
+                <div class="p-5 rounded-2xl bg-railway-800/60 border border-slate-800 backdrop-blur-sm hover:border-emerald-500/40 transition group">
+                    <div class="flex items-center justify-between text-slate-400 mb-2">
+                        <span class="text-xs uppercase font-semibold">Indian Footfall</span>
+                        <i data-lucide="users" class="w-4 h-4 text-emerald-400 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-display font-extrabold text-white">24M+</div>
+                    <p class="text-[11px] text-slate-400 mt-1">Commuters daily across 7,300+ stations</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-railway-800/60 border border-slate-800 backdrop-blur-sm hover:border-cyan-500/40 transition group">
+                    <div class="flex items-center justify-between text-slate-400 mb-2">
+                        <span class="text-xs uppercase font-semibold">Energy per Step</span>
+                        <i data-lucide="activity" class="w-4 h-4 text-cyan-400 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-display font-extrabold text-cyan-300">3 - 7 J</div>
+                    <p class="text-[11px] text-slate-400 mt-1">Piezo-magnetic hybrid generation</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-railway-800/60 border border-slate-800 backdrop-blur-sm hover:border-amber-500/40 transition group">
+                    <div class="flex items-center justify-between text-slate-400 mb-2">
+                        <span class="text-xs uppercase font-semibold">Solar Canopy Yield</span>
+                        <i data-lucide="sun" class="w-4 h-4 text-amber-400 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-display font-extrabold text-amber-300">1.2 MWp</div>
+                    <p class="text-[11px] text-slate-400 mt-1">Average major station rooftop potential</p>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-railway-800/60 border border-slate-800 backdrop-blur-sm hover:border-emerald-500/40 transition group">
+                    <div class="flex items-center justify-between text-slate-400 mb-2">
+                        <span class="text-xs uppercase font-semibold">Net Zero Target</span>
+                        <i data-lucide="globe" class="w-4 h-4 text-emerald-400 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-display font-extrabold text-emerald-400">100%</div>
+                    <p class="text-[11px] text-slate-400 mt-1">Platform auxiliary self-sufficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE STEP TESTER WIDGET -->
+    <section id="step-simulator" class="py-12 bg-railway-800/40 border-y border-slate-800/70 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-railway-800 to-railway-900 border border-slate-700/80 shadow-2xl relative overflow-hidden">
+                <!-- Ambient Glow inside Card -->
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-2xl"></div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="space-y-3 text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Interactive Proof of Concept
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-display font-bold text-white">Experience "Har Kadam Bijli Ka" Yourself</h2>
+                        <p class="text-sm text-slate-300 max-w-lg">
+                            Click or tap the smart tile button below to simulate passenger footfall. See the real-time piezo-kinetic pulse trigger voltage, charge supercapacitors, and light up station platforms!
+                        </p>
+                        <div class="flex items-center justify-center md:justify-start gap-3 pt-2 text-xs text-slate-400">
+                            <label class="flex items-center gap-2 cursor-pointer select-none">
+                                <input type="checkbox" id="soundToggle" checked class="rounded border-slate-700 text-cyan-500 focus:ring-0 bg-slate-900">
+                                <span>Acoustic haptic feedback (Web Audio)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Step Button & Telemetry -->
+                    <div class="flex flex-col items-center gap-4">
+                        <button id="stepTileBtn" class="step-tile-btn relative w-44 h-44 rounded-2xl bg-gradient-to-b from-slate-700 to-railway-900 border-4 border-cyan-400/80 flex flex-col items-center justify-center shadow-xl shadow-cyan-500/20 active:scale-95 transition-all group overflow-hidden">
+                            <!-- Pressure indicator wave -->
+                            <div id="stepRipple" class="absolute inset-0 bg-cyan-400/20 scale-0 rounded-full transition-transform duration-300 pointer-events-none"></div>
+                            <i data-lucide="footprints" class="w-14 h-14 text-cyan-400 group-hover:scale-110 transition mb-2"></i>
+                            <span class="text-xs font-display font-extrabold uppercase tracking-widest text-white">STEP ON TILE</span>
+                            <span class="text-[10px] text-cyan-300 font-mono mt-1">PRESS HERE</span>
+                        </button>
+
+                        <!-- Live Telemetry Readout -->
+                        <div class="grid grid-cols-3 gap-3 w-full text-center">
+                            <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                                <div class="text-[10px] uppercase font-bold text-slate-400">Steps</div>
+                                <div id="liveStepCount" class="font-mono text-lg font-bold text-white">0</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                                <div class="text-[10px] uppercase font-bold text-slate-400">Joules</div>
+                                <div id="liveJoules" class="font-mono text-lg font-bold text-cyan-300">0.0 J</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800">
+                                <div class="text-[10px] uppercase font-bold text-slate-400">Peak Volts</div>
+                                <div id="liveVoltage" class="font-mono text-lg font-bold text-emerald-400">0.0 V</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ABOUT THE SYSTEM & CORE VISION -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">System Vision &amp; Problem Statement</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white mt-2">
+                    Why Indian &amp; Global Railways Need This Innovation
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 to-cyan-400 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-300 mt-4 text-base leading-relaxed">
+                    Railway stations operate 24 hours a day with massive baseload power requirements for lighting, ventilation, escalators, automated turnstiles, and signaling systems. Yet, two colossal energy streams go completely uncaptured every single day: continuous passenger kinetic pressure and massive open-sky solar canopy exposure.
+                </p>
+            </div>
+
+            <!-- 3 Pillars Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="p-8 rounded-3xl bg-railway-800/50 border border-slate-800 hover:border-emerald-500/50 transition-all hover:-translate-y-1.5 duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500/20 transition">
+                        <i data-lucide="footprints" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3">1. Kinetic Footfall Harvesting</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Major junction stations experience over 200,000 passenger footfalls daily. Strategic placement of multi-layered piezoelectric ceramics and electromagnetic rack-pinion floor modules at entry gates, stairs, and foot overbridges converts mechanical compression directly into electrical micro-pulses.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> PZT Piezoelectric crystal stacks</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Vertical displacement: 3 to 5 mm</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Yield: 4 - 6 Joules per normal walking step</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="p-8 rounded-3xl bg-railway-800/50 border border-slate-800 hover:border-amber-500/50 transition-all hover:-translate-y-1.5 duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6 group-hover:bg-amber-500/20 transition">
+                        <i data-lucide="sun-medium" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3">2. Bifacial Solar Platform Sheds</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Railway platforms stretch hundreds of meters with corrugated shed roofing ideal for high-efficiency solar arrays. Bifacial monocrystalline photovoltaic panels capture direct sunlight from above and platform ground-reflected albedo light from below, achieving 25% higher annual yields.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> N-Type TOPCon &amp; Bifacial Monocrystalline cells</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> 22.4% cell efficiency with anti-soiling coating</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Dual-glass structural resilience for train turbulence</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="p-8 rounded-3xl bg-railway-800/50 border border-slate-800 hover:border-cyan-500/50 transition-all hover:-translate-y-1.5 duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6 group-hover:bg-cyan-500/20 transition">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-white mb-3">3. AI Hybrid Storage &amp; Microgrid</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Kinetic energy generates intermittent high-voltage pulses, whereas solar energy provides continuous variable DC power. Our hybrid power conditioning unit (PCU) utilizes ultra-fast supercapacitor arrays for instant pulse capture paired with LiFePO4 battery banks and an AI energy dispatcher.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Dual-stage Supercapacitor &plus; LiFePO4 battery banks</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Sub-millisecond MPPT pulse rectification</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Bi-directional synchronization with station auxiliary grid</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DEEP TECHNICAL ARCHITECTURE & WORKING MECHANISM -->
+    <section id="tech" class="py-24 bg-railway-800/30 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Engineering &amp; Physics</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white mt-2">
+                    How The Hybrid Ecosystem Functions
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-300 mt-4 text-base">
+                    From dynamic mechanical stress to clean synchronized AC station electricity.
+                </p>
+            </div>
+
+            <!-- Architecture Flow Diagram Card -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-railway-800/80 border border-slate-700/80 shadow-2xl mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center text-center">
+                    
+                    <!-- Step 1 -->
+                    <div class="p-5 rounded-2xl bg-railway-900 border border-slate-800 flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3">
+                            <i data-lucide="footprints" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-cyan-400">INPUT SOURCE A</span>
+                        <h4 class="font-bold text-white text-sm mt-1">Commuter Footfall</h4>
+                        <p class="text-xs text-slate-400 mt-1">Weight: 50-90 kg<br>Cadence: 1.8 Hz<br>Deflection: 3-5 mm</p>
+                    </div>
+
+                    <!-- Flow Arrow 1 -->
+                    <div class="hidden lg:flex justify-center text-slate-600">
+                        <i data-lucide="arrow-right" class="w-8 h-8 text-cyan-500 animate-pulse"></i>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="p-5 rounded-2xl bg-railway-900 border border-slate-800 flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3">
+                            <i data-lucide="sun" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-amber-400">INPUT SOURCE B</span>
+                        <h4 class="font-bold text-white text-sm mt-1">Solar Radiation</h4>
+                        <p class="text-xs text-slate-400 mt-1">Irradiance: 800-1100 W/m²<br>Bifacial Shed Canopy<br>Direct &plus; Albedo Rays</p>
+                    </div>
+
+                    <!-- Flow Arrow 2 -->
+                    <div class="hidden lg:flex justify-center text-slate-600">
+                        <i data-lucide="arrow-right" class="w-8 h-8 text-emerald-500 animate-pulse"></i>
+                    </div>
+
+                    <!-- Step 3: Hybrid Converter -->
+                    <div class="p-5 rounded-2xl bg-gradient-to-b from-railway-900 to-railway-800 border-2 border-emerald-500/60 flex flex-col items-center shadow-lg shadow-emerald-500/10">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center mb-3">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-emerald-400">HYBRID POWER HUB</span>
+                        <h4 class="font-bold text-white text-sm mt-1">Conditioning &amp; Storage</h4>
+                        <p class="text-xs text-slate-400 mt-1">Supercapacitors (Fast Pulse)<br>LiFePO4 Base Bank (48V)<br>AI Microgrid Inverter</p>
+                    </div>
+                </div>
+
+                <!-- Final Distribution Bar -->
+                <div class="mt-8 pt-8 border-t border-slate-800 flex flex-wrap items-center justify-around gap-4 text-xs font-semibold text-slate-300">
+                    <span class="flex items-center gap-2"><i data-lucide="lightbulb" class="w-4 h-4 text-amber-400"></i> Platform LED Illumination</span>
+                    <span class="flex items-center gap-2"><i data-lucide="wind" class="w-4 h-4 text-cyan-400"></i> BLDC Station Concourse Fans</span>
+                    <span class="flex items-center gap-2"><i data-lucide="tv" class="w-4 h-4 text-emerald-400"></i> Passenger Information Display Systems (PIDS)</span>
+                    <span class="flex items-center gap-2"><i data-lucide="radio" class="w-4 h-4 text-purple-400"></i> Emergency Signaling &amp; CCTV Backup</span>
+                </div>
+            </div>
+
+            <!-- Detailed Technical Breakdown Tabs / Cards -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Kinetic Deep Dive -->
+                <div class="p-8 rounded-3xl bg-railway-800/60 border border-slate-800">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="p-2.5 rounded-xl bg-cyan-500/20 text-cyan-400">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-display font-bold text-white">Piezoelectric &amp; Electro-Mechanical Subsystem</h3>
+                            <p class="text-xs text-slate-400">High-Durability Commuter Floor Tiles</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <div class="p-4 rounded-xl bg-railway-900/80 border border-slate-800">
+                            <h4 class="font-bold text-cyan-300 mb-1">1. Multilayer PZT Piezo-Ceramic Discs</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Lead Zirconate Titanate ($Pb[Zr_xTi_{1-x}]O_3$) ceramics configured in parallel stacks. Under human mechanical stress of 600–900 N, the crystallographic dipole shifts create an instantaneous electric displacement field yielding 15–35 V per impact.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-railway-900/80 border border-slate-800">
+                            <h4 class="font-bold text-cyan-300 mb-1">2. Rack-and-Pinion Micro Flywheel Generator</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                For high-impact concourse zones, a 4mm vertical foot travel drives a dual-gear mechanical rack coupled with a high-torque neodymium miniature dynamo, spinning a mini flywheel for 1.5 seconds post-step to extend electrical output duration.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-railway-900/80 border border-slate-800">
+                            <h4 class="font-bold text-cyan-300 mb-1">3. Durability &amp; Environmental Ingress</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Encapsulated in recycled aircraft-grade vulcanized polymer with an IP67 waterproof seal and anti-skid ribbed surface. Rated for 50 million footsteps without material fatigue or degradation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solar & Microgrid Deep Dive -->
+                <div class="p-8 rounded-3xl bg-railway-800/60 border border-slate-800">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="p-2.5 rounded-xl bg-amber-500/20 text-amber-400">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-display font-bold text-white">Solar Photovoltaic &amp; Smart Microgrid</h3>
+                            <p class="text-xs text-slate-400">Aerodynamic Rooftops &amp; Adaptive AI Dispatch</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <div class="p-4 rounded-xl bg-railway-900/80 border border-slate-800">
+                            <h4 class="font-bold text-amber-300 mb-1">1. Bifacial Double-Glass Modules</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Standard railway platform roofs produce excessive heat underneath. By installing translucent bifacial panels, the platform receives pleasant ambient natural lighting while collecting both sky radiation (front) and concrete platform reflection (rear bifaciality factor ~75%).
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-railway-900/80 border border-slate-800">
+                            <h4 class="font-bold text-amber-300 mb-1">2. Ultra-Fast Supercapacitor Buffering</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Lithium batteries degrade when subjected to irregular millisecond kinetic current spikes. A bank of 500F 16V graphene supercapacitors absorbs high current pulses in microseconds and smoothly transfers trickle charge into the main battery storage.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-railway-900/80 border border-slate-800">
+                            <h4 class="font-bold text-amber-300 mb-1">3. Edge AI SCADA Load Balancer</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                IoT telemetry nodes calculate train arrival schedules and commuter surges. Station lights and fans automatically adjust brightness and RPM based on commuter density and ambient solar output, cutting wasted electricity by 38%.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE STATION ENERGY SIMULATOR -->
+    <section id="simulator" class="py-24 relative overflow-hidden">
+        <!-- Glows -->
+        <div class="absolute top-1/2 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Interactive Engineering Sandbox</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white mt-2">
+                    Station Microgrid Power Calculator
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-500 via-cyan-400 to-amber-400 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-300 mt-4 text-base">
+                    Simulate any railway station: adjust footfall density, kinetic tile coverage, and solar canopy area to see real-time generation, financial savings, and emissions reduction.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Controls Column (5 cols) -->
+                <div class="lg:col-span-5 p-6 sm:p-8 rounded-3xl bg-railway-800/80 border border-slate-700 shadow-xl space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-700/80 pb-4">
+                        <h3 class="font-display font-bold text-lg text-white flex items-center gap-2">
+                            <i data-lucide="sliders" class="w-5 h-5 text-cyan-400"></i> Station Parameters
+                        </h3>
+                        <button id="resetSimBtn" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-1">
+                            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Default
+                        </button>
+                    </div>
+
+                    <!-- Slider 1: Passenger Footfall -->
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <label for="sliderFootfall" class="text-slate-300">Daily Commuter Footfall</label>
+                            <span id="valFootfall" class="font-mono text-cyan-300 font-bold">120,000</span>
+                        </div>
+                        <input type="range" id="sliderFootfall" min="5000" max="400000" step="5000" value="120000" class="w-full accent-cyan-400 cursor-pointer">
+                        <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                            <span>Small Suburban (5k)</span>
+                            <span>Mega Terminal (400k)</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 2: Kinetic Tile Deployment Count -->
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <label for="sliderTiles" class="text-slate-300">Kinetic Tiles Installed</label>
+                            <span id="valTiles" class="font-mono text-emerald-400 font-bold">350 tiles</span>
+                        </div>
+                        <input type="range" id="sliderTiles" min="50" max="1500" step="25" value="350" class="w-full accent-emerald-400 cursor-pointer">
+                        <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                            <span>Gates only (50)</span>
+                            <span>Full Bridges &amp; Platforms (1500)</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 3: Solar Canopy Area -->
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <label for="sliderSolar" class="text-slate-300">Solar Canopy Rooftop Area</label>
+                            <span id="valSolar" class="font-mono text-amber-300 font-bold">3,500 m²</span>
+                        </div>
+                        <input type="range" id="sliderSolar" min="500" max="15000" step="250" value="3500" class="w-full accent-amber-400 cursor-pointer">
+                        <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                            <span>Single platform (500 m²)</span>
+                            <span>Mega Junction (15,000 m²)</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 4: Sun Hours -->
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-2">
+                            <label for="sliderSunHours" class="text-slate-300">Peak Sun Hours / Day</label>
+                            <span id="valSunHours" class="font-mono text-yellow-300 font-bold">5.2 hrs</span>
+                        </div>
+                        <input type="range" id="sliderSunHours" min="3.0" max="7.0" step="0.1" value="5.2" class="w-full accent-yellow-400 cursor-pointer">
+                        <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                            <span>Monsoon / Winter (3.0h)</span>
+                            <span>Peak Summer (7.0h)</span>
+                        </div>
+                    </div>
+
+                    <!-- Station Preset Dropdown Buttons -->
+                    <div class="pt-2">
+                        <span class="text-xs uppercase font-bold text-slate-400 block mb-2">Or Choose Station Archetype:</span>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button class="preset-btn px-2.5 py-1.5 rounded-lg text-[11px] font-bold bg-slate-900 hover:bg-slate-700 text-slate-300 border border-slate-700 transition" data-footfall="45000" data-tiles="120" data-solar="1200" data-sun="5.0">
+                                Suburban Hub
+                            </button>
+                            <button class="preset-btn px-2.5 py-1.5 rounded-lg text-[11px] font-bold bg-slate-900 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 transition" data-footfall="150000" data-tiles="450" data-solar="4500" data-sun="5.5">
+                                Major Junction
+                            </button>
+                            <button class="preset-btn px-2.5 py-1.5 rounded-lg text-[11px] font-bold bg-slate-900 hover:bg-slate-700 text-emerald-300 border border-emerald-500/40 transition" data-footfall="350000" data-tiles="1200" data-solar="12000" data-sun="5.8">
+                                Mega Terminal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulation Output Dashboard (7 cols) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- High Level Metrics Cards -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-2xl bg-railway-800/80 border border-slate-800">
+                            <div class="text-[11px] font-bold uppercase text-slate-400">Total Clean Energy</div>
+                            <div id="outTotalKwh" class="text-2xl font-display font-extrabold text-white mt-1">3,450 <span class="text-sm font-normal text-slate-400">kWh/day</span></div>
+                            <div id="outAnnualMwh" class="text-[11px] text-emerald-400 font-mono mt-1">1,259 MWh/year</div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-railway-800/80 border border-slate-800">
+                            <div class="text-[11px] font-bold uppercase text-cyan-300">Kinetic Yield</div>
+                            <div id="outKineticKwh" class="text-2xl font-display font-extrabold text-cyan-300 mt-1">280 <span class="text-sm font-normal text-slate-400">kWh/day</span></div>
+                            <div id="outFootstepsTapped" class="text-[11px] text-slate-400 font-mono mt-1">210k steps captured</div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-railway-800/80 border border-slate-800">
+                            <div class="text-[11px] font-bold uppercase text-amber-300">Solar PV Yield</div>
+                            <div id="outSolarKwh" class="text-2xl font-display font-extrabold text-amber-300 mt-1">3,170 <span class="text-sm font-normal text-slate-400">kWh/day</span></div>
+                            <div id="outSolarCapacity" class="text-[11px] text-slate-400 font-mono mt-1">680 kWp rated</div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-railway-800/80 border border-slate-800">
+                            <div class="text-[11px] font-bold uppercase text-emerald-400">Annual CO₂ Offset</div>
+                            <div id="outCarbonOffset" class="text-2xl font-display font-extrabold text-emerald-400 mt-1">982 <span class="text-sm font-normal text-slate-400">Tons</span></div>
+                            <div class="text-[11px] text-slate-400 mt-1">Equivalent to 45,000 trees</div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-railway-800/80 border border-slate-800">
+                            <div class="text-[11px] font-bold uppercase text-yellow-300">Electricity Bill Savings</div>
+                            <div id="outRupeeSavings" class="text-2xl font-display font-extrabold text-yellow-300 mt-1">₹ 1.01 Cr</div>
+                            <div id="outDollarSavings" class="text-[11px] text-slate-400 font-mono mt-1">$121,500 / year</div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-railway-800/80 border border-slate-800">
+                            <div class="text-[11px] font-bold uppercase text-purple-400">Station Self-Sufficiency</div>
+                            <div id="outSelfSufficiency" class="text-2xl font-display font-extrabold text-purple-400 mt-1">87.5%</div>
+                            <div class="text-[11px] text-slate-400 mt-1">Of station auxiliary loads</div>
+                        </div>
+                    </div>
+
+                    <!-- Live Chart Visualization -->
+                    <div class="p-6 rounded-3xl bg-railway-800/80 border border-slate-700">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h4 class="font-display font-bold text-white text-sm">24-Hour Microgrid Power Generation Profile</h4>
+                                <p class="text-xs text-slate-400">Kinetic spikes align with peak morning &amp; evening commute; Solar powers daytime</p>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs font-semibold">
+                                <span class="flex items-center gap-1.5 text-cyan-400"><span class="w-3 h-3 rounded-full bg-cyan-400 inline-block"></span> Kinetic</span>
+                                <span class="flex items-center gap-1.5 text-amber-400"><span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span> Solar</span>
+                                <span class="flex items-center gap-1.5 text-emerald-400"><span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span> Station Load</span>
+                            </div>
+                        </div>
+                        <div class="h-64 w-full">
+                            <canvas id="hourlyProfileChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: STATION DEPLOYMENT BLUEPRINT & ZONE MAP -->
+    <section id="blueprint" class="py-24 bg-railway-800/30 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Implementation Geography</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white mt-2">
+                    Station Infrastructure Blueprint
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-300 mt-4 text-base">
+                    Discover how different zones of a railway station are mapped to kinetic and solar generation units. Click each zone to inspect telemetry and engineering requirements.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <!-- Zone Selector & Details (5 cols) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <button class="zone-tab w-full text-left p-5 rounded-2xl bg-railway-800/90 border border-cyan-500/50 shadow-lg transition active-zone" data-zone="fob">
+                        <div class="flex items-center justify-between">
+                            <span class="font-display font-bold text-white text-base flex items-center gap-2">
+                                <i data-lucide="git-commit" class="w-5 h-5 text-cyan-400"></i> Zone 1: Foot Overbridges &amp; Staircases
+                            </span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono">High Kinetic</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Concentrated bi-directional passenger surge. High downward gravitational kinetic transfer on steps.</p>
+                    </button>
+
+                    <button class="zone-tab w-full text-left p-5 rounded-2xl bg-railway-800/50 border border-slate-800 hover:border-slate-700 transition" data-zone="turnstile">
+                        <div class="flex items-center justify-between">
+                            <span class="font-display font-bold text-white text-base flex items-center gap-2">
+                                <i data-lucide="shield" class="w-5 h-5 text-emerald-400"></i> Zone 2: Automated Turnstiles &amp; Security
+                            </span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">100% Impact Rate</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Every passenger steps directly onto the entry pad. Predictable high-frequency pulses.</p>
+                    </button>
+
+                    <button class="zone-tab w-full text-left p-5 rounded-2xl bg-railway-800/50 border border-slate-800 hover:border-slate-700 transition" data-zone="canopy">
+                        <div class="flex items-center justify-between">
+                            <span class="font-display font-bold text-white text-base flex items-center gap-2">
+                                <i data-lucide="sun" class="w-5 h-5 text-amber-400"></i> Zone 3: Platform Rooftop Canopies
+                            </span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono">Solar Bulk Gen</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Continuous unobstructed rooftop length. Bifacial generation capturing platform ground reflection.</p>
+                    </button>
+
+                    <button class="zone-tab w-full text-left p-5 rounded-2xl bg-railway-800/50 border border-slate-800 hover:border-slate-700 transition" data-zone="hub">
+                        <div class="flex items-center justify-between">
+                            <span class="font-display font-bold text-white text-base flex items-center gap-2">
+                                <i data-lucide="server" class="w-5 h-5 text-purple-400"></i> Zone 4: Microgrid Control &amp; Supercapacitor Vault
+                            </span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono">Central Hub</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Subterranean climate-controlled storage housing LiFePO4 batteries, inverters, and AI monitoring.</p>
+                    </button>
+                </div>
+
+                <!-- Interactive Blueprint Visualizer (7 cols) -->
+                <div class="lg:col-span-7 p-6 sm:p-8 rounded-3xl bg-railway-900 border border-slate-700/80 shadow-2xl relative overflow-hidden">
+                    <div id="zoneDisplay" class="space-y-6">
+                        <!-- Dynamic Content updated by JS -->
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                            <div>
+                                <span id="zoneTag" class="text-xs uppercase font-mono font-bold text-cyan-400">ZONE 1 SPECIFICATIONS</span>
+                                <h3 id="zoneTitle" class="text-2xl font-display font-bold text-white">Foot Overbridges &amp; Skywalks</h3>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                                <i id="zoneIcon" data-lucide="git-commit" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+
+                        <!-- Technical Spec Grid -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 rounded-xl bg-railway-800/80 border border-slate-800">
+                                <span class="text-xs text-slate-400 uppercase font-semibold">Sensor &amp; Generator Type</span>
+                                <p id="zoneSpec1" class="text-sm font-bold text-white mt-1">PZT-5H Ceramics &plus; Dual Flywheel Rack</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-railway-800/80 border border-slate-800">
+                                <span class="text-xs text-slate-400 uppercase font-semibold">Average Dynamic Load</span>
+                                <p id="zoneSpec2" class="text-sm font-bold text-cyan-300 mt-1">750 N per human footstep</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-railway-800/80 border border-slate-800">
+                                <span class="text-xs text-slate-400 uppercase font-semibold">Energy Output</span>
+                                <p id="zoneSpec3" class="text-sm font-bold text-emerald-400 mt-1">5.4 Joules / step (0.0015 Wh)</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-railway-800/80 border border-slate-800">
+                                <span class="text-xs text-slate-400 uppercase font-semibold">Target Station Load</span>
+                                <p id="zoneSpec4" class="text-sm font-bold text-amber-300 mt-1">FOB lighting, security cameras, emergency signs</p>
+                            </div>
+                        </div>
+
+                        <!-- Zone Architectural Blueprint Concept Graphic -->
+                        <div class="p-5 rounded-2xl bg-railway-800/40 border border-dashed border-slate-700">
+                            <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Cross-Sectional Installation Diagram</h4>
+                            <div class="h-36 rounded-xl bg-slate-950 flex flex-col items-center justify-center relative overflow-hidden font-mono text-xs text-slate-400 p-4">
+                                <div class="w-full flex justify-between border-b border-cyan-500/40 pb-2 text-cyan-300 font-semibold">
+                                    <span>[1] Top Layer: 12mm Anti-Skid Polymer Slabs</span>
+                                    <span>IP67 Seal</span>
+                                </div>
+                                <div class="w-full flex justify-between py-2 text-emerald-400">
+                                    <span>[2] Core: Piezoelectric Discs &plus; Miniature Pinion Transmission</span>
+                                    <span>3-5mm stroke</span>
+                                </div>
+                                <div class="w-full flex justify-between border-t border-slate-800 pt-2 text-purple-400">
+                                    <span>[3] Base: Sub-flooring Conduit &plus; Supercapacitor Bus Lines</span>
+                                    <span>48V DC Trunk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TECHNICAL SPECIFICATIONS TABLE & RESEARCH -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Rigorous Engineering</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white mt-2">
+                    System Technical Specifications
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Responsive Table Container -->
+            <div class="overflow-x-auto rounded-3xl border border-slate-800 bg-railway-800/50 shadow-xl">
+                <table class="w-full text-left text-sm text-slate-300">
+                    <thead class="bg-railway-900/90 text-xs uppercase font-mono text-slate-400 border-b border-slate-800">
+                        <tr>
+                            <th scope="col" class="py-4 px-6">System Subsystem</th>
+                            <th scope="col" class="py-4 px-6">Parameter &amp; Standard</th>
+                            <th scope="col" class="py-4 px-6">Engineering Value</th>
+                            <th scope="col" class="py-4 px-6">Operational Benefit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/80 font-normal">
+                        <tr class="hover:bg-railway-700/30 transition">
+                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2">
+                                <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i> Piezo Kinetic Floor
+                            </td>
+                            <td class="py-4 px-6 text-slate-400">Piezoelectric Constant ($d_{33}$)</td>
+                            <td class="py-4 px-6 font-mono text-cyan-300">590 &times; 10⁻¹² C/N</td>
+                            <td class="py-4 px-6">Ultra-sensitive charge generation under footsteps</td>
+                        </tr>
+                        <tr class="hover:bg-railway-700/30 transition">
+                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2">
+                                <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i> Mechanical Floor
+                            </td>
+                            <td class="py-4 px-6 text-slate-400">Displacement &amp; Gear Ratio</td>
+                            <td class="py-4 px-6 font-mono text-cyan-300">3.5 mm stroke @ 1:24 ratio</td>
+                            <td class="py-4 px-6">Extends generator spin post-step for steady current</td>
+                        </tr>
+                        <tr class="hover:bg-railway-700/30 transition">
+                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2">
+                                <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i> Solar PV Modules
+                            </td>
+                            <td class="py-4 px-6 text-slate-400">Cell Type &amp; Bifaciality</td>
+                            <td class="py-4 px-6 font-mono text-amber-300">N-type TOPCon / 78% bifaciality</td>
+                            <td class="py-4 px-6">Harvests reflected platform albedo lighting</td>
+                        </tr>
+                        <tr class="hover:bg-railway-700/30 transition">
+                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2">
+                                <i data-lucide="battery-charging" class="w-4 h-4 text-emerald-400"></i> Fast Energy Buffer
+                            </td>
+                            <td class="py-4 px-6 text-slate-400">Supercapacitor Array</td>
+                            <td class="py-4 px-6 font-mono text-emerald-300">16V 500F Graphene Module</td>
+                            <td class="py-4 px-6">Millisecond pulse absorption without battery wear</td>
+                        </tr>
+                        <tr class="hover:bg-railway-700/30 transition">
+                            <td class="py-4 px-6 font-bold text-white flex items-center gap-2">
+                                <i data-lucide="shield" class="w-4 h-4 text-purple-400"></i> Durability Testing
+                            </td>
+                            <td class="py-4 px-6 text-slate-400">Ingress &amp; Cycle Lifetime</td>
+                            <td class="py-4 px-6 font-mono text-purple-300">IP67 Waterproof / 50M Cycles</td>
+                            <td class="py-4 px-6">Withstands high monsoon humidity &amp; commuter dust</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ENVIRONMENTAL, ECONOMIC & ESG IMPACT -->
+    <section id="impact" class="py-24 bg-railway-800/30 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Sustainable Public Infrastructure</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white mt-2">
+                    Environmental &amp; ESG Dividends
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-300 mt-4 text-base">
+                    Aligning directly with the United Nations Sustainable Development Goals (UN SDGs) and Indian Railways Mission Net Zero Carbon Emission.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- SDG 7 -->
+                <div class="p-6 rounded-3xl bg-railway-800/60 border border-slate-800 text-center hover:border-amber-400/50 transition">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4 font-display font-extrabold text-xl">
+                        7
+                    </div>
+                    <h3 class="font-display font-bold text-white text-base mb-1">Affordable Clean Energy</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Decentralized clean generation at the exact site of consumption eliminates transmission and distribution (T&amp;D) line losses.
+                    </p>
+                </div>
+
+                <!-- SDG 9 -->
+                <div class="p-6 rounded-3xl bg-railway-800/60 border border-slate-800 text-center hover:border-cyan-400/50 transition">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mx-auto mb-4 font-display font-extrabold text-xl">
+                        9
+                    </div>
+                    <h3 class="font-display font-bold text-white text-base mb-1">Industry &amp; Innovation</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Modernizes legacy stations into resilient smart transit hubs with smart microgrid telemetry and automated load curtailment.
+                    </p>
+                </div>
+
+                <!-- SDG 11 -->
+                <div class="p-6 rounded-3xl bg-railway-800/60 border border-slate-800 text-center hover:border-emerald-400/50 transition">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4 font-display font-extrabold text-xl">
+                        11
+                    </div>
+                    <h3 class="font-display font-bold text-white text-base mb-1">Sustainable Cities</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Enables eco-friendly public transit centers with integrated EV charging docks powered entirely by commuter footfall and sun.
+                    </p>
+                </div>
+
+                <!-- SDG 13 -->
+                <div class="p-6 rounded-3xl bg-railway-800/60 border border-slate-800 text-center hover:border-teal-400/50 transition">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center mx-auto mb-4 font-display font-extrabold text-xl">
+                        13
+                    </div>
+                    <h3 class="font-display font-bold text-white text-base mb-1">Climate Action</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Reduces thermal coal grid dependence. Offsets up to 1,500 metric tons of CO₂ equivalent annually per major terminal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MEET THE INNOVATOR - SOURADIP GHOSH -->
+    <section id="innovator" class="py-24 relative overflow-hidden">
+        <div class="absolute -bottom-10 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-railway-800 via-railway-800 to-railway-900 border-2 border-slate-700/80 shadow-2xl relative">
+                
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <!-- Profile Badge / Avatar -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-36 h-36 rounded-3xl bg-gradient-to-tr from-emerald-500 via-cyan-400 to-amber-400 p-1 shadow-xl shadow-cyan-500/20 mb-4 transform hover:rotate-3 transition duration-300">
+                            <div class="w-full h-full bg-railway-900 rounded-[22px] flex flex-col items-center justify-center text-center p-3">
+                                <span class="font-display font-black text-4xl bg-gradient-to-br from-white via-cyan-200 to-emerald-400 bg-clip-text text-transparent">SG</span>
+                                <span class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mt-1">Innovator</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-display font-black text-white">SOURADIP GHOSH</h3>
+                        <p class="text-xs font-semibold text-cyan-400 tracking-wider uppercase mt-1">Creator &amp; System Architect</p>
+                        
+                        <!-- Socials / Links -->
+                        <div class="flex items-center gap-3 mt-4">
+                            <a href="https://github.com/0xSouradip" target="_blank" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 flex items-center justify-center transition" title="GitHub Profile">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                            <a href="mailto:ghoshsouradip02@gmail.com" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 border border-slate-700 flex items-center justify-center transition" title="Email Contact">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Innovator Bio & Vision Statement -->
+                    <div class="space-y-4 text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                            <i data-lucide="award" class="w-3.5 h-3.5"></i> Project Genesis &amp; Engineering Philosophy
+                        </div>
+                        
+                        <h4 class="text-2xl font-display font-bold text-white">
+                            "Every Footstep Holds Unlocked Energy. We Just Needed The Bridge To Harvest It."
+                        </h4>
+                        
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            <strong>HAR KADAM BIJLI KA</strong> was envisioned and developed by <strong>SOURADIP GHOSH</strong> to solve one of the most pressing challenges of modern public infrastructure: how to transition mega-scale transit stations into self-sustaining, zero-emission green microgrids without disrupting everyday commuter travel.
+                        </p>
+                        
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            By harmonizing two complementary energy sources—the dynamic, high-density mechanical pressure of commuter footsteps and the abundant solar exposure of station sheds—this project provides a deployable, economically viable, and scalable engineering roadmap for smart railway stations across the globe.
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
+                            <a href="https://github.com/0xSouradip/har-kadam-bijli-ka" target="_blank" class="px-5 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black shadow-lg shadow-cyan-500/20 transition flex items-center gap-2">
+                                <i data-lucide="git-branch" class="w-4 h-4"></i>
+                                <span>Contribute on GitHub</span>
+                            </a>
+                            <button id="openWhitepaperBtn2" class="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/30 transition flex items-center gap-2">
+                                <i data-lucide="book-open" class="w-4 h-4"></i>
+                                <span>Read Full Project Proposal</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-railway-900 border-t border-slate-800 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                    <i data-lucide="zap" class="w-4 h-4"></i>
+                </div>
+                <div>
+                    <span class="font-display font-bold text-white text-sm">HAR KADAM BIJLI KA</span>
+                    <p class="text-[11px] text-slate-500">A Hybrid Kinetic and Solar Energy System for Railway Stations</p>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p class="text-slate-300 font-medium">
+                    Conceived &amp; Developed by <span class="text-cyan-400 font-bold">SOURADIP GHOSH</span>
+                </p>
+                <p class="text-[11px] text-slate-500 mt-1">
+                    Theme: Sustainable Clean Energy &amp; Mobility | Focus: Renewable Energy &amp; Public Infrastructure Innovation
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHITEPAPER & DOCUMENTATION MODAL -->
+    <div id="whitepaperModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div class="bg-railway-800 border border-slate-700 max-w-4xl w-full rounded-3xl p-6 sm:p-10 text-slate-200 relative max-h-[90vh] overflow-y-auto shadow-2xl">
+            <!-- Close Button -->
+            <button id="closeWhitepaperBtn" class="absolute top-6 right-6 p-2 rounded-xl bg-slate-900 text-slate-400 hover:text-white border border-slate-700">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="space-y-6">
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="text-xs font-mono font-bold text-emerald-400 uppercase">Official Project Whitepaper &amp; Synopsis</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">HAR KADAM BIJLI KA</h2>
+                    <p class="text-sm text-cyan-300 font-medium">A Hybrid Kinetic and Solar Energy System for Modern Railway Stations</p>
+                    <p class="text-xs text-slate-400 mt-1">Author &amp; Principal Investigator: <strong>Souradip Ghosh</strong></p>
+                </div>
+
+                <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                    <h4 class="font-bold text-white text-base">1. Executive Abstract</h4>
+                    <p>
+                        Railway transit infrastructure represents one of the highest concentrated densities of repetitive kinetic energy in human civilization. Every day, millions of travelers exert vertical compressive forces on station platforms, turnstiles, and overbridges. Concurrently, railway stations possess kilometers of unobstructed rooftop surface area over platforms and tracks. This project—<strong>HAR KADAM BIJLI KA</strong>, authored by <strong>SOURADIP GHOSH</strong>—presents an integrated hybrid energy generation architecture combining piezoelectric/mechanical kinetic floor tiles with bifacial solar photovoltaic canopies to establish autonomous, net-zero railway station microgrids.
+                    </p>
+
+                    <h4 class="font-bold text-white text-base">2. Physical &amp; Mathematical Principles</h4>
+                    <p>
+                        The kinetic subsystem leverages the direct piezoelectric effect in lead zirconate titanate (PZT) ceramic elements:
+                    </p>
+                    <div class="p-3 rounded-xl bg-railway-900 font-mono text-cyan-300 text-xs">
+                        V = (g₃₃ &times; F &times; t) / A<br>
+                        E_kinetic = 0.5 &times; C &times; V² &plus; ∫(τ &times; ω &times; η_mech) dt
+                    </div>
+                    <p>
+                        Where $g_{33}$ is the piezoelectric voltage coefficient, $F$ is the commuter contact force (average 750 N), $t$ is thickness, $A$ is active area, $\tau$ is torque on the rack-pinion dynamo, and $\omega$ is rotational velocity.
+                    </p>
+
+                    <h4 class="font-bold text-white text-base">3. Implementation Roadmap</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-300">
+                        <li><strong>Phase 1: Pilot Turnstile Pod</strong> — Deployment of 20 kinetic tiles at station ticket turnstiles to power automated RFID gates.</li>
+                        <li><strong>Phase 2: Foot Overbridge (FOB) Array</strong> — Integration of 200 kinetic tiles on main pedestrian bridges with a 100 kWp platform solar shed canopy.</li>
+                        <li><strong>Phase 3: Station Microgrid Autonomous Mesh</strong> — Full station rollout with supercapacitors and bidirectional SCADA traction grid tie-in.</li>
+                    </ul>
+
+                    <h4 class="font-bold text-white text-base">4. Conclusion &amp; Socio-Economic Impact</h4>
+                    <p>
+                        "Har Kadam Bijli Ka" demonstrates that sustainable public mobility is not merely about electric trains—it is about turning public stations into active renewable power plants. Under the initiative of <strong>Souradip Ghosh</strong>, this engineering model serves as a benchmark for next-generation green railway transit.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-700 flex justify-end">
+                    <button id="closeWhitepaperBtn2" class="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-700 hover:bg-slate-600 text-white">
+                        Close Whitepaper
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
