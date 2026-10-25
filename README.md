@@ -19,7 +19,7 @@ By strategically harvesting two complementary renewable resources:
 This hybrid ecosystem establishes a self-sufficient, climate-resilient microgrid capable of powering station lighting, concourse ventilation, passenger automated turnstiles, and EV charging hubs.
 
 > **Lead Engineer & System Architect**: **SOURADIP GHOSH**  
-> **Frontend Engineers**: **ANGHSU SARKAR** & **SNEHA MUKHERJEE**  
+> **Frontend Engineers**: **ANGSHU SARKAR** & **SNEHA MUKHERJEE**  
 > **Theme**: Sustainable Clean Energy & Mobility  
 > **Core Focus**: Renewable energy, energy efficiency, sustainable public infrastructure, and innovation.
 
@@ -133,9 +133,9 @@ Where:
 
 We are a group of passionate engineering students dedicated to creating sustainable, climate-resilient technologies for public transit infrastructure.
 
-| <img src="assets/team/souradip.jpg" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: 78% 25%;"> | <img src="assets/team/anghsu.jpg" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: center 20%;"> | <img src="assets/team/sneha.png" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: center 15%;"> |
+| <img src="assets/team/souradip.jpg" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: 78% 25%;"> | <img src="assets/team/angshu.jpg" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: center 20%;"> | <img src="assets/team/sneha.png" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: center 15%;"> |
 | :---: | :---: | :---: |
-| **SOURADIP GHOSH** | **ANGHSU SARKAR** | **SNEHA MUKHERJEE** |
+| **SOURADIP GHOSH** | **ANGSHU SARKAR** | **SNEHA MUKHERJEE** |
 | **Lead Engineer & System Architect** | **Frontend Engineer** | **Frontend Engineer** |
 | *Engineering Student* | *Engineering Student* | *Engineering Student* |
 | System design, kinetic modeling & microgrid architecture | Interactive controls, Web Audio simulator & UX state | Diurnal load analytics, ESG indicators & telemetry UI |
@@ -146,4 +146,4 @@ We are a group of passionate engineering students dedicated to creating sustaina
 ## 📜 License & Citation
 
 This project is open-source under the [MIT License](LICENSE).  
-Developed by **Souradip Ghosh**, **Anghsu Sarkar**, and **Sneha Mukherjee** for **HAR KADAM BIJLI KA**.
+Developed by **Souradip Ghosh**, **Angshu Sarkar**, and **Sneha Mukherjee** for **HAR KADAM BIJLI KA**.
